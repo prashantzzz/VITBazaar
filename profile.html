@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | VITBazaar</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@10.1.0"></script>
+    <script src="index.js" defer></script>
+
+</head>
+
+<body class="flex flex-col bg-base-200 min-h-screen">
+    <!-- Navbar -->
+    <header>
+        <div class="navbar bg-base-100 flex-wrap gap-y-4 justify-between">
+            <a class="btn btn-ghost normal-case text-xl font-serif">
+                <img src="img3.png" alt="Avatar" class="avatar inline-block align-middle w-10 h-10 rounded-full">
+                <span class="text-black" style="color: #191919;">VIT</span><span class="text-red-500"
+                    style="color: #D42459;">Bazaar</span>
+            </a>
+            <div class="navbar-center flex gap-8 mx-auto">
+                <a href="/" class="link">Home</a>
+                <a href="buy.html" class="link">Buy products</a>
+                <a href="sell.html" class="link">Sell products</a>
+            </div>
+            <button id="themeToggle" class="btn btn-sm md:btn-md btn-accent">Theme</button>
+
+        </div>
+    </header>
+    <main class="flex-1 p-4 gap-4 md:gap-x-8 flex flex-wrap md:p-8" id="userDetails">
+
+    </main>
+</body>
+
+</html>

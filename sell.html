@@ -1,0 +1,122 @@
+<html data-theme="winter">
+<!-- Your HTML content -->
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@10.1.0"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header>
+        <div class="navbar bg-base-100 flex-wrap gap-y-4 justify-between shadow-lg">
+            <a href="/" class="btn btn-ghost normal-case text-xl font-serif">
+                <img src="img3.png" alt="Avatar" class="avatar inline-block align-middle w-10 h-10 rounded-full">
+                <span class="text-black" style="color: #191919;">VIT</span><span class="text-red-500"
+                    style="color: #D42459;">Bazaar</span>
+            </a>
+            <div class="navbar-center flex gap-8">
+                <a href="/" class="link">Home</a>
+                <a href="buy.html" class="link">Buy products</a>
+            </div>
+            <div class="navbar-end gap-4">
+                <button id="themeToggle" class="btn btn-sm md:btn-md btn-accent">Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <form id="sellForm" class="flex-1 left-box bg-base-200">
+        <div
+            class="box-container flex flex-wrap justify-between p-4 max-w-4xl rounded-full bg-base-100 mt-4 mx-auto shadow-1xl">
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="mat" value="Mattress" type="radio" name="radio-10" class="radio checked:bg-blue-500"
+                    checked />
+                <label for="mat" class="label cursor-pointer">
+                    <span class="label-text">Mattress</span>
+                </label>
+            </div>
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="get" value="Bucket" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+                <label for="get" class="label cursor-pointer">
+                    <span class="label-text">Bucket</span>
+                </label>
+            </div>
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="sm" value="studymaterial" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+                <label for="sm" class="label cursor-pointer">
+                    <span class="label-text">Study Material</span>
+                </label>
+            </div>
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="eg" value="electronicgadget" type="radio" name="radio-10"
+                    class="radio checked:bg-blue-500" />
+                <label for="eg" class="label cursor-pointer">
+                    <span class="label-text">Electronic Gadget</span>
+                </label>
+            </div>
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="cy" value="cycle" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+                <label for="cy" class="label cursor-pointer">
+                    <span class="label-text">Cycle</span>
+                </label>
+            </div>
+            <div class="form-control flex flex-row gap-2 items-center">
+                <input id="oi" value="otheritems" type="radio" name="radio-10" class="radio checked:bg-blue-500" />
+                <label for="oi" class="label cursor-pointer">
+                    <span class="label-text">Other Items</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row max-w-6xl mx-auto gap-4">
+            <div class="p-8 my-5 container flex flex-col gap-4 w-full rounded-box bg-base-100 ">
+                <h1 class="text-3xl text-content pb-2 font-bold ">Product Details</h1>
+                <p class="text-content">Description</p>
+                <textarea required id="desc" class="textarea  textarea-info w-full h-20"
+                    placeholder="Write something about your product" rows="5"></textarea>
+                <p>Price</p>
+                <input required id="price" type="number" placeholder="Price"
+                    class="input input-bordered input-accent text-primary gap-4 w-full">
+                <p class="gap-4">Upload Photos</p>
+                <input required type="file" id="photo"
+                    class="file-input file-input-bordered file-input-info w-full bg-opacity-50" />
+            </div>
+
+
+            <div class="p-8 my-5 container flex flex-col gap-4 w-full rounded-box bg-base-100 gap-4">
+                <h2 class="text-3xl pb-2 font-bold">Your Details</h2>
+                <div class="form-control gap-2">
+                    <p>Name</p>
+                    <div class="flex justify-between">
+                        <input required id="username" type="text" placeholder="Your Name"
+                            class="input input-bordered input-accent w-full" />
+                    </div>
+                </div>
+                <div class="form-control gap-2">
+                    <p>Phone Number</p>
+                    <div class="dropdown dropdown-hover">
+                        <input required id="phone" type="number" placeholder="Phone Number"
+                            class="input input-bordered input-accent w-full"></p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full justify-center">
+            <button class="btn mx-12 btn-secondary text-xl max-w-lg w-auto">Sell/Rent Now</button>
+            <button type="reset" class="btn mx-12 btn-error btn-active text-xl max-w-lg w-auto">Clear</button>
+        </div>
+    </form>
+
+    <style>
+        .btn {
+            transition: box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</body>

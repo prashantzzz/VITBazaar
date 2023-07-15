@@ -1,0 +1,97 @@
+<html data-theme="winter">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/appwrite@10.1.0"></script>
+  <script src="index.js" defer></script>
+  <style>
+    dialog::backdrop {
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header>
+    <div class="navbar bg-base-100 flex-wrap gap-y-4 justify-between">
+      <a class="btn btn-ghost normal-case text-xl font-serif">
+        <img src="img3.png" alt="Avatar" class="avatar inline-block align-middle w-10 h-10 rounded-full">
+        <span class="text-black" style="color: #191919;">VIT</span><span class="text-red-500"
+          style="color: #D42459;">Bazaar</span>
+      </a>
+      <div class="navbar-end justify-center md:justify-end gap-4 mx-auto md:mx-0">
+        <button id="themeToggle" class="btn btn-sm md:btn-md btn-accent">Theme</button>
+        <div class="flex auth-btn-wrapper gap-2">
+          <button class="btn btn-sm md:btn-md btn-accent" onclick="signupDialog.showModal()">Signup</button>
+          <button class="btn btn-sm md:btn-md btn-primary" onclick="loginDialog.showModal()">Login</button>
+        </div>
+        <dialog id="signupDialog" class="z-50 absolute inset-0 rounded-lg w-full max-w-lg">
+          <form id="signupForm" class="card flex-shrink-0 w-full">
+            <div class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input required id="email" type="text" placeholder="email" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input required id="password" type="password" placeholder="password" class="input input-bordered" />
+                <!-- <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label> -->
+              </div>
+              <div class="form-control mt-6">
+                <button id="signupBtn" class="btn btn-primary">signup</button>
+              </div>
+          </form>
+        </dialog>
+        <dialog id="loginDialog" class="z-50 absolute inset-0 rounded-lg w-full max-w-lg">
+          <form id="loginForm" class="card flex-shrink-0 w-full">
+            <div class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input required id="email" type="text" placeholder="email" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input required id="password" type="password" placeholder="password" class="input input-bordered" />
+                <!-- <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label> -->
+              </div>
+              <div class="form-control mt-6">
+                <button id="loginBtn" class="btn btn-primary">login</button>
+              </div>
+          </form>
+        </dialog>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero flex-1 bg-base-200">
+    <div class="hero-content justify-between w-full text-content flex-col lg:flex-row-reverse">
+      <img src="img1.png" class="w-full rounded-lg md:w-1/2 md:-m-4" />
+      <div class="mx-auto text-center md:text-left md:w-1/2">
+        <img src="img2.png" alt="logo" class="w-48 -my-4 mx-auto md:mx-0 md:-ml-8 md:w-96 md:w-1/2 ">
+        <p class="py-6 max-w-lg md:text-4xl">Your Campus Marketplace!</p>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a class="btn btn-secondary" href="buy.html">Buy Now</a>
+          <a class="btn btn-accent" href="sell.html">Sell/Rent Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
