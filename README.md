@@ -8,7 +8,7 @@ Features:
 - Filter
 - Contact view
 - User Profile
-
+ 
 To run VITBazaar locally:
 1. Clone the repository
 2. Install dependencies
